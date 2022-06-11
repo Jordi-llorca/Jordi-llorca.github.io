@@ -412,4 +412,14 @@ ul {
     .content {
         height: 250px;
     }
+
+    section {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.56) 5%, transparent 1%);
+    }
+    
+    .hero {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.56) 5%, transparent 1%);
+    }
+
+    
 }
