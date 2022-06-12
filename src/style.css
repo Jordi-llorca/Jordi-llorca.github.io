@@ -1,7 +1,10 @@
 :root {
     font-size: 16px;
-    font-family: 'Open Sans';
-    --text-primary: #b6b6b6;
+    font-family: 'Poppins', sans-serif;
+    --background-color: #17181e;
+    --block-color: #1c1d25;
+    --border-block-color: #50a1a5;
+    --text-primary: #ffffff;
     --text-secondary: #ececec;
     --bg-primary: #23232e;
     --bg-secondary: #141418;
@@ -9,14 +12,13 @@
 }
 
 body {
-    background-color: #17181e;
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
     margin: 0;
 }
 
 section {
-    background-color: #17181e;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-primary);
     background-image: radial-gradient(rgba(255, 255, 255, 0.56) 2%, transparent 1%);
     background-size: 30px 30px;
     background-position: 0 0, 5px 5px;
@@ -24,9 +26,9 @@ section {
 }
 
 .hero {
-    background-color: #17181e;
+    background-color: var(--background-color);
     height: 100vh;
-    color: white;
+    color: var(--text-primary);
     font-size: 50px;
 
     background-image: radial-gradient(rgba(255, 255, 255, 0.56) 2%, transparent 1%);
@@ -36,7 +38,7 @@ section {
 }
 
 .block{
-    background-color: #1c1d25;
+    background-color: var(--block-color);
     background-image: none;
     padding: 40px;
     border: 1px #00000000 solid;
@@ -46,13 +48,13 @@ section {
 }
 
 .block:hover{
-    border: 1px #50a1a5 solid;
+    border: 1px var(--border-block-color) solid;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
 footer {
-    background-color: #1c1d25;
-    color: white;
+    background-color: var(--block-color);
+    color: var(--text-primary);
     text-align: center;
     padding: 20px;
 }
@@ -79,7 +81,6 @@ nav {
 nav ul {
     display: flex;
     list-style-type: none;
-    width: 500px;
     justify-content: space-around;
     font-size: 20px;
 }
@@ -95,7 +96,7 @@ nav ul {
 
 nav li {
     text-decoration: none;
-
+    padding: 30px;
 }
 
 h1 {
@@ -136,27 +137,6 @@ p {
     margin-bottom: 200px;
 }
 
-.button {
-    width: 200px;
-    height: 55px;
-    border-radius: 30px;
-    background-color: #447274;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 300;
-    padding-top: 5px;
-    margin-top: 20px;
-}
-
-.button:hover {
-    background-color: #345557;
-}
-
-.button:active {
-    background-color: #A9A9A9;
-    color: #808080;
-}
-
 .face {
     height: 200px;
     border-radius: 100px;
@@ -185,7 +165,7 @@ p {
 
 .headshot {
     width: 300px;
-    border-radius: 150px;
+    border-radius: 50px;
     margin-right: 80px;
 }
 
@@ -204,7 +184,6 @@ p {
     border-radius: 10px;
     padding: .75rem;
     margin-bottom: 2rem;
-    border: 0;
     flex-grow: 0;
     flex-shrink: 0;
     border: 1px #50a1a500 solid;
@@ -235,12 +214,6 @@ p {
     border-radius: 20px;
 }
 
-hr {
-    border: 0.5px solid white;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 .project-links{
     display: flex;
     flex-wrap: wrap;
@@ -269,14 +242,6 @@ hr {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-.hamburger {
-    display: none;
-}
-
-.hamburger:focus{
-    outline: 0;
 }
 
 .stock-img{
@@ -311,6 +276,7 @@ a {
 
 #footer-list {
     justify-content: space-evenly;
+    margin: 0px;
 }
 
 .resume-container {
@@ -339,12 +305,6 @@ a {
     font-size: 14px;
 }
 
-.content {
-    text-align: left;
-    padding: 20px;
-    height: 200px;
-}
-
 .skills {
     width: 400px;
     margin-left: 20px;
@@ -368,10 +328,6 @@ a {
     margin: 5px;
 }
 
-.content h2 {
-    font-size: 20px;
-}
-
 .work-history {
     text-align: left;
     padding: 30px;
@@ -390,10 +346,13 @@ ul {
     padding: 15px;
 }
 
+.social-phone {
+    display: none;
+}
 
 @media only screen and (max-width: 1000px) {
     .hero-area {
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -421,5 +380,121 @@ ul {
         background-image: radial-gradient(rgba(255, 255, 255, 0.56) 5%, transparent 1%);
     }
 
+    h1 {
+        font-size: 80px;
+    }
     
+    h2 {
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+    
+    p {
+        font-size: 40px;
+    }
+
+    .stock-img{
+        height: 800px;
+        margin: 30px;
+        padding-bottom: 0px;
+    }
+
+    .headshot{
+        margin-top: 40px;
+    }
+    .sub-section {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 700px;
+        height: 650px;
+    }
+
+    .project-image {
+        width: 500px;
+    }
+
+    .subtext {
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 30px;
+    }
+
+    .fecha{
+        font-size: 24px;
+    }
+    
+    .puesto{
+        font-size: 32px;
+        text-decoration: underline 00.20em #52d0d6 ;
+    }
+    
+    .sitioTrabajo{
+        font-size: 30px;
+    }
+    
+    .descripcion{
+        font-size: 25px;
+    }
+
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .skills {
+        width: fit-content;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .skills li {
+        font-size: 30px;
+    }
+
+    .work-history h2 {
+        font-size: 40px;
+    }
+
+    .footer-area {
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    
+    .footer-area p {
+        font-size: 30px;
+    }
+    
+    .footer-link{
+        font-size: 40px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .social-phone {
+        display: contents;
+    }
+
+    .footer-block {
+        margin: 20px;
+        justify-content: left;
+    }
+
+    #footer-list {
+        flex-direction: column;
+    }
+
+    svg {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
